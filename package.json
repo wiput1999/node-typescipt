@@ -1,0 +1,21 @@
+{
+  "name": "node-typescipt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wiput Pootong (wiput.pootong@gmail.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}
