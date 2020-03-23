@@ -9,8 +9,8 @@
     "clean": "rimraf build",
     "dev": "nodemon",
     "start": "ts-node ./src/index.ts",
-    "migrate:up": "ts-node ./node_modules/typeorm/cli.js migration:run",
-    "migrate:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate",
+    "migration:up": "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate",
     "test": "yarn test:lint",
     "test:lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "format": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix"
