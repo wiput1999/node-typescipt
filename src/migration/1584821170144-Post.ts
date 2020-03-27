@@ -11,6 +11,7 @@ export class Post1584821170144 implements MigrationInterface {
             type: 'int',
             isPrimary: true,
             isUnique: true,
+            isGenerated: true,
             generationStrategy: 'increment'
           },
           {

@@ -18,6 +18,7 @@ export class Comment1585340721626 implements MigrationInterface {
             type: 'int',
             isPrimary: true,
             isUnique: true,
+            isGenerated: true,
             generationStrategy: 'increment'
           },
           {
