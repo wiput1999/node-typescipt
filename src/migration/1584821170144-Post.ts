@@ -4,12 +4,14 @@ export class Post1584821170144 implements MigrationInterface {
   async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'posts',
+        name: 'post',
         columns: [
           {
             name: 'id',
             type: 'int',
-            isPrimary: true
+            isPrimary: true,
+            isUnique: true,
+            generationStrategy: 'increment'
           },
           {
             name: 'title',
@@ -26,6 +28,6 @@ export class Post1584821170144 implements MigrationInterface {
   }
 
   async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('posts', true)
+    await queryRunner.dropTable('posts', true, true)
   }
 }

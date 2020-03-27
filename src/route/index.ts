@@ -1,13 +1,13 @@
 import { Router, Request, Response } from 'express'
 import { getManager } from 'typeorm'
-import { Posts } from '../entity/Posts'
+import { Post } from '../entity/Post'
 
 const router = Router()
 
 router.get('/posts', async function(_: Request, res: Response) {
-  const postRepository = getManager().getRepository(Posts)
+  const postRepository = getManager().getRepository(Post)
 
-  const posts = await postRepository.find()
+  const posts = await postRepository.find({ relations: ['comments'] })
   res.json(posts)
 })
 
